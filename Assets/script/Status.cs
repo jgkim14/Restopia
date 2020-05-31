@@ -10,9 +10,9 @@ public class Status : MonoBehaviour
 
     public static float Life = 1; // HP
     public static float Speed = 8.0f; //캐릭터 스피드
-    public static float DashPower = 8f; // 대쉬 거리
+    public static float DashPower = 10f; // 대쉬 거리
     public static float Jumpcount = 2.0f; // 점프횟수
-    public static float JumpPower = 10.5f;      //점프 높이
+    public static float JumpPower = 11.0f;      //점프 높이
     public static float DashCoolTime = 5.0f;    //더미데이터
     public static float GoldPlus = 1;//더미데이터
     public static float Money = 10000;
