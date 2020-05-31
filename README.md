@@ -1,2 +1,0 @@
-# NOM
-ChungWoon NOM Project
