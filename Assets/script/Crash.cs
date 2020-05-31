@@ -34,6 +34,7 @@ public class Crash : MonoBehaviour
             MyRigid.constraints = RigidbodyConstraints2D.None;
             MyRigid.constraints = RigidbodyConstraints2D.FreezeRotation;
             MoveCharacter.anim.SetBool("Wall", false);
+            MoveCharacter.Wallsiding = false;
         }
     }
 
@@ -110,4 +111,5 @@ public class Crash : MonoBehaviour
         MoveCharacter.Money = 0;
         SceneManager.LoadScene("gameover");
     }
+
 }

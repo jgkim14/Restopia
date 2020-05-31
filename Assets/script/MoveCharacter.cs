@@ -311,21 +311,24 @@ public class MoveCharacter : MonoBehaviour
     {
         if (Jumpcount > 0)
         {
-            if (Physics2D.gravity == Status.FloorVector)
+            if (!Wallsiding)
             {
-                MyRigid.velocity = new Vector2(MyRigid.velocity.x, Status.JumpPower);
-            }
-            if (Physics2D.gravity == Status.RightVector)
-            {
-                MyRigid.velocity = new Vector2(-Status.JumpPower, MyRigid.velocity.y);
-            }
-            if (Physics2D.gravity == Status.CellingVector)
-            {
-                MyRigid.velocity = new Vector2(MyRigid.velocity.x, -Status.JumpPower);
-            }
-            if (Physics2D.gravity == Status.LeftVector)
-            {
-                MyRigid.velocity = new Vector2(Status.JumpPower, MyRigid.velocity.y);
+                if (Physics2D.gravity == Status.FloorVector)
+                {
+                    MyRigid.velocity = new Vector2(MyRigid.velocity.x, Status.JumpPower);
+                }
+                if (Physics2D.gravity == Status.RightVector)
+                {
+                    MyRigid.velocity = new Vector2(-Status.JumpPower, MyRigid.velocity.y);
+                }
+                if (Physics2D.gravity == Status.CellingVector)
+                {
+                    MyRigid.velocity = new Vector2(MyRigid.velocity.x, -Status.JumpPower);
+                }
+                if (Physics2D.gravity == Status.LeftVector)
+                {
+                    MyRigid.velocity = new Vector2(Status.JumpPower, MyRigid.velocity.y);
+                }
             }
 
 

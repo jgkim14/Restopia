@@ -9,6 +9,7 @@ public class LegUnit : MonoBehaviour
         if(collision.gameObject.tag == "nogravityline")
         {
             MoveCharacter.Jumpcount = Status.Jumpcount;
+            MoveCharacter.Jumping = false;
         }
         if (collision.gameObject.tag == "floor" || collision.gameObject.tag == "rightwall" || collision.gameObject.tag == "celling" || collision.gameObject.tag == "leftwall")
         {
@@ -18,7 +19,7 @@ public class LegUnit : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "floor" || collision.gameObject.tag == "rightwall" || collision.gameObject.tag == "celling" || collision.gameObject.tag == "leftwall")
+        if (collision.gameObject.tag == "floor" || collision.gameObject.tag == "rightwall" || collision.gameObject.tag == "celling" || collision.gameObject.tag == "leftwall" || collision.gameObject.tag == "nogravityline")
         {
             MoveCharacter.Jumping = false;
         }
